@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN" "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+<generatorConfiguration>
+  <context id="context1">
+  <commentGenerator >  
+           <property name="suppressDate" value="true"/>  
+            <property name="suppressAllComments" value="true"/>  
+        </commentGenerator>  
+     <!-- 注释控制完毕 -->  
+    <jdbcConnection connectionURL="jdbc:mysql://127.0.0.1:3306/blog" driverClass="com.mysql.jdbc.Driver" password="" userId="root" />
+    <javaModelGenerator targetPackage="club.xiehaiyang.entity" targetProject="Blog" />
+   <!--  <sqlMapGenerator targetPackage="club.haiyang.domain" targetProject="MySpringBoot" /> -->
+   <!--  <javaClientGenerator targetPackage="club.haiyang.domain" targetProject="MySpringBoot" type="XMLMAPPER" /> -->
+    <!-- <table schema="haiyang" tableName="cpu_use_info">
+    </table> -->
+    <!-- <table schema="haiyang" tableName="men_use_info">
+    </table> -->
+     <!-- <table schema="haiyang" tableName="user">
+    </table> -->
+    <table schema="blog"  tableName="s_cpu">
+    </table>
+  </context>
+</generatorConfiguration>
