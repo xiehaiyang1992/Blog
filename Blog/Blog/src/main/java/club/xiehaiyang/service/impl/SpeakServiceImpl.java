@@ -14,7 +14,7 @@ import club.xiehaiyang.service.SpeakService;
 @Service
 public class SpeakServiceImpl implements SpeakService {
 	/*
-	 * »ñÈ¡µ±Ç°WEBÏîÄ¿µÄ¾ø¶ÔÂ·¾¶
+	 * è·å–å½“å‰WEBé¡¹ç›®çš„ç»å¯¹è·¯å¾„
 	 */
 	public String path = "/"
 			+ this.getClass().getResource("/").getPath().replaceFirst("/", "").replaceAll("WEB-INF/classes/", "")
@@ -23,7 +23,7 @@ public class SpeakServiceImpl implements SpeakService {
 	public String baidu(String text) {
 		try {
 			URL url = new URL(
-					"http://fanyi.baidu.com/gettts?lan=zh&spd=5&source=web&text=" + URLEncoder.encode(text, "utf-8"));
+					"https://fanyi.baidu.com/gettts?lan=zh&spd=3&source=web&text=" + URLEncoder.encode(text, "utf-8"));
 			DataInputStream dis = new DataInputStream(url.openStream());
 			String imageName = new Date().getTime() + ".mp3";
 			FileOutputStream fos = new FileOutputStream(new File(path + imageName));
@@ -43,7 +43,7 @@ public class SpeakServiceImpl implements SpeakService {
 
 	}
 
-	// espeak -v zh -w 123.wav "ÎÒÔÚÄÄÀï"
+	// espeak -v zh -w 123.wav "æˆ‘åœ¨å“ªé‡Œ"
 	public String centos_zh(String text) {
 		try {
 			String imageName = new Date().getTime() + ".wav";
